@@ -1,0 +1,149 @@
+//////////////////// CONTENT AREA ////////////////////
+
+.content {
+    padding: 7rem;
+
+    animation-name: moveInLeft;
+    animation-duration: .7s;
+
+    &__title {
+        font-size: 7rem;
+        font-weight: 300;
+        color: var(--color-grey-dark-1);
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        color: var(--color-grey-dark-1);
+        margin-bottom: 2rem;
+    }
+}
+
+//////////////////// PROJECTS SECTION ////////////////////
+
+.projects {
+    display: flex;
+
+    @media only screen and (max-width: $bp-sm-medium) {
+        flex-direction: column;
+    }
+
+    &__item {
+        margin: 1rem 1rem 2rem;
+        background-color: gray;
+        border-radius: 1px;
+        position: relative;
+       // box-shadow: 0 1rem 1.5rem var(--color-grey-dark-3);
+    }
+
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+
+    &__overlay {
+        text-decoration: none;
+        position: absolute;
+        border-radius: 1px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: var(--color-grey-dark-1);
+        //text-decoration: none;
+        transform: scale(.9, .9);
+
+        &:hover {
+            opacity: 0.9;
+            transform: scale(1, 1);
+            box-shadow: 0 1rem 1.5rem var(--color-grey-dark-3);
+        }
+    }
+
+    &__heading {
+        padding: .5rem;
+        font-size: 2.2rem;
+        color: var(--color-grey-light-1);
+
+        &-active {
+            animation-name: moveInLeftLess;
+            animation-duration: .7s;
+        }
+    }
+
+    &__description {
+        padding: .5rem;
+        font-size: 1.3rem;
+        color: var(--color-grey-light-1);
+
+        &-active {
+            animation-name: moveInRightLess;
+            animation-duration: .7s;
+        }
+    }
+
+    &__line {
+        max-width: 24rem;
+        border: none;
+        border-top: 1px solid var(--color-grey-dark-3);
+        margin: 0 1rem 0 1rem;
+    }
+
+}
+
+//////////////////// CONTACT FORM ////////////////////
+
+.form {
+    &__group {
+        margin-bottom: .5rem;
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1rem 2rem;
+        border-radius: 2px;
+        background-color: #fff;
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 65%;
+
+        @media only screen and (max-width: $bp-sm-medium) {
+            width: 100%;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem var(--color-grey-dark-3);
+            border-bottom: 3px solid var(--color-primary-light);
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid var(--color-secondary);
+        }
+
+        &::-webkit-input-placeholder {
+            color: var(--color-grey-dark-3);
+        }
+    }
+
+    &__label {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-3.8rem);
+    }
+}

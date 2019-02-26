@@ -1,0 +1,137 @@
+//////////////////// SIDEBAR - HEADER ////////////////////
+
+.header {
+    text-align: center;
+    margin-top: 5rem;
+
+    &__portrait {
+        width: 10rem;
+        padding: 1rem;
+        border-radius: 50%;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 7rem;
+        }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        color: var(--color-grey-light-3);
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+    }
+}
+
+//////////////////// SIDEBAR - NAVIGATION ////////////////////
+
+.side-nav {
+    font-size: 1.8rem;
+    list-style: none;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1.4rem;
+    }
+
+    &__item {
+        position: relative;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 0 .5rem 0 .5rem;
+        } 
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin-bottom: 0;
+            } 
+        }
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary);
+        transform: scaleY(0);
+        transition: transform .2s,
+                    width .4s cubic-bezier(1,0,0,1) .2s;
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: var(--color-grey-light-1);
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 6rem;
+        margin: 2rem 0;
+        position: relative;
+        z-index: 5;
+        font-weight: 300;
+        line-height: .5rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 1.5rem 4rem;
+            margin: 0;
+        } 
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 1.5rem 1rem;
+        }
+    }
+}
+
+//////////////////// SIDEBAR - SOCIAL ////////////////////
+
+.social {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+
+    &__item {
+        width: 3.5rem;
+        padding: .3rem;
+
+        &-svg {
+            transition: all 0.2s ease;
+            fill: var(--color-grey-light-3);
+        }
+        &-svg:hover {
+            fill: var(--color-primary);
+        }
+    }
+
+    &__item:hover {
+        cursor: pointer;
+    } 
+}
+
+//////////////////// SIDEBAR - LEGAL ////////////////////
+
+.legal {
+    font-size: 1.2rem;
+    color: var(--color-grey-dark-4);
+    text-align: center;
+    padding: 2.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
+}

@@ -1,0 +1,65 @@
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-2);
+    box-shadow: var(--shadow-dark);
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;;
+    }
+}
+
+.content-area {
+    display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
+
+}
+
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+
+    flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-largest) {
+        height: 100%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        min-height: 25rem;
+    }
+}
+
+.page {
+    background-image: linear-gradient(
+        to right bottom, rgba(255, 255, 255, 0.9), 
+                         rgba(216, 216, 216, 0.9)),
+                            url(/img/background.jpg);
+    background-size: cover;
+    min-height: 65rem;
+
+    clip-path: polygon(0 15% , 100% 0, 100% 85%, 0 100%);
+
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+
+    @media only screen and (max-width: $bp-medium) {
+        min-height: 100%
+    }
+
+    @media only screen and (max-width: $bp-sm-medium) {
+        clip-path: none;
+        min-height: fit-content;
+        width: 100%;
+        align-self: center;
+    }
+}

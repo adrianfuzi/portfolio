@@ -1,0 +1,39 @@
+//////////////////// ANIMATION - CONTENT ////////////////////
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-7rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+//////////////////// ANIMATION - PROJECTS OVERLAY ////////////////////
+
+@keyframes moveInRightLess {
+    0% {
+        opacity: 0;
+        transform: translateX(4.2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInLeftLess {
+    0% {
+        opacity: 0;
+        transform: translateX(-4.2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
