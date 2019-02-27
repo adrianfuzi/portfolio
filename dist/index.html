@@ -108,25 +108,28 @@
                 <main class="page" id="contact">
                     <div class="content">
                         <div class="content__title">Contact</div>
-                        <form method="post" action="contact.php" class="form">
+                        <form method="POST" data-netlify="true" class="form">
                             <div class="form__group">
-                                <input type="text" class="form__input" placeholder="Your Name" id="name" required>
+                                <input type="text" class="form__input" placeholder="Your Name" name="name" id="name" required>
                                 <label for="name" class="form__label">Your Name</label>
                             </div>
 
                             <div class="form__group">
-                                <input type="text" class="form__input" placeholder="Your Email" id="email" required>
+                                <input type="text" class="form__input" placeholder="Your Email" name="email" id="email" required>
                                 <label for="email" class="form__label">Your Email</label>
                             </div>
 
                             <div class="form__group">
-                                <input type="text" class="form__input" placeholder="Subject" id="subject" required>
+                                <input type="text" class="form__input" placeholder="Subject" name="subject" id="subject" required>
                                 <label for="subject" class="form__label">Subject</label>
                             </div>
 
                             <div class="form__group">
-                                <textarea class="form__input" placeholder="Your Message" id="message" rows="3"></textarea>
+                                <textarea class="form__input" placeholder="Your Message" name="message" id="message" rows="3"></textarea>
                                 <label for="message" class="form__label">Your Message</label>
+                            </div>
+                            <div class="field">
+                                <div data-netlify-recapcha="true"></div>
                             </div>
                             <button type="submit" name="submit" class="btn-submit">Send message</button>
                         </form>
