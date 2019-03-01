@@ -20,7 +20,7 @@ $bp-large: 68.75em; // 1100px
 $bp-medium: 57.5em; // 920px
 $bp-sm-medium: 46.25em; // 740px
 $bp-small: 39.375em; // 630px
-
+$bp-smallest: 20em;
 
 * {
     margin: 0;
@@ -37,8 +37,24 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px, 10px/16 = 62.5%
 
-    @media only screen and (max-width: $bp-large) {
-        font-size: 50%;
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 90%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 71%;
+    }
+
+    @media only screen and (max-width: $bp-sm-medium) {
+        font-size: 62.5%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 60%;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 41.5%;
     }
 }
 

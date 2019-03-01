@@ -22,9 +22,21 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
-  @media only screen and (max-width: 68.75em) {
+  @media only screen and (max-width: 75em) {
     html {
-      font-size: 50%; } }
+      font-size: 90%; } }
+  @media only screen and (max-width: 57.5em) {
+    html {
+      font-size: 71%; } }
+  @media only screen and (max-width: 46.25em) {
+    html {
+      font-size: 62.5%; } }
+  @media only screen and (max-width: 39.375em) {
+    html {
+      font-size: 60%; } }
+  @media only screen and (max-width: 20em) {
+    html {
+      font-size: 41.5%; } }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -46,8 +58,7 @@ body {
   @media only screen and (max-width: 75em) {
     .container {
       margin: 0;
-      max-width: 100%;
-      width: 100%; } }
+      max-width: 100%; } }
 
 .content-area {
   display: flex; }
@@ -76,12 +87,15 @@ body {
   flex: 1;
   justify-content: center;
   flex-direction: column; }
+  @media only screen and (max-width: 75em) {
+    .page {
+      background-size: contain; } }
   @media only screen and (max-width: 57.5em) {
     .page {
-      min-height: 100%; } }
+      clip-path: none;
+      width: 100%; } }
   @media only screen and (max-width: 46.25em) {
     .page {
-      clip-path: none;
       min-height: fit-content;
       width: 100%;
       align-self: center; } }
@@ -163,6 +177,9 @@ body {
   padding: 7rem;
   animation-name: moveInLeft;
   animation-duration: .7s; }
+  @media only screen and (max-width: 46.25em) {
+    .content {
+      text-align: center; } }
   .content__title {
     font-size: 7rem;
     font-weight: 300;
@@ -171,22 +188,42 @@ body {
     font-size: 1.8rem;
     color: var(--color-grey-dark-1);
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 46.25em) {
+      .content__text {
+        text-align: justify; } }
 
 .projects {
   display: flex; }
-  @media only screen and (max-width: 46.25em) {
+  @media only screen and (max-width: 75em) {
     .projects {
       flex-direction: column; } }
+  @media only screen and (max-width: 57.5em) {
+    .projects {
+      flex-direction: row; } }
+  @media only screen and (max-width: 46.25em) {
+    .projects {
+      flex-direction: column;
+      align-items: center; } }
   .projects__item {
     margin: 1rem 1rem 2rem;
     background-color: gray;
     border-radius: 1px;
     position: relative; }
+    @media only screen and (max-width: 75em) {
+      .projects__item {
+        width: 57%; } }
+    @media only screen and (max-width: 68.75em) {
+      .projects__item {
+        width: 65%; } }
+    @media only screen and (max-width: 39.375em) {
+      .projects__item {
+        width: 100%; } }
   .projects__photo {
     width: 100%;
     display: block; }
   .projects__overlay {
     text-decoration: none;
+    text-align: left;
     position: absolute;
     border-radius: 1px;
     top: 0;
@@ -199,6 +236,11 @@ body {
     transition: .5s ease;
     background-color: var(--color-grey-dark-1);
     transform: scale(0.9, 0.9); }
+    @media only screen and (max-width: 75em) {
+      .projects__overlay {
+        opacity: 0.7;
+        transform: scale(1, 1);
+        box-shadow: 0 1rem 1.5rem var(--color-grey-dark-3); } }
     .projects__overlay:hover {
       opacity: 0.9;
       transform: scale(1, 1);
@@ -207,6 +249,18 @@ body {
     padding: .5rem;
     font-size: 2.2rem;
     color: var(--color-grey-light-1); }
+    @media only screen and (max-width: 75em) {
+      .projects__heading {
+        font-size: 2.2rem; } }
+    @media only screen and (max-width: 68.75em) {
+      .projects__heading {
+        font-size: 1.5rem; } }
+    @media only screen and (max-width: 57.5em) {
+      .projects__heading {
+        font-size: 1.2rem; } }
+    @media only screen and (max-width: 39.375em) {
+      .projects__heading {
+        font-size: 2rem; } }
     .projects__heading-active {
       animation-name: moveInLeftLess;
       animation-duration: .7s; }
@@ -214,6 +268,12 @@ body {
     padding: .5rem;
     font-size: 1.3rem;
     color: var(--color-grey-light-1); }
+    @media only screen and (max-width: 57.5em) {
+      .projects__description {
+        font-size: .8rem; } }
+    @media only screen and (max-width: 46.25em) {
+      .projects__description {
+        font-size: 1.3rem; } }
     .projects__description-active {
       animation-name: moveInRightLess;
       animation-duration: .7s; }
@@ -236,7 +296,7 @@ body {
   border: none;
   border-bottom: 3px solid transparent;
   width: 65%; }
-  @media only screen and (max-width: 46.25em) {
+  @media only screen and (max-width: 75em) {
     .form__input {
       width: 100%; } }
   .form__input:focus {
