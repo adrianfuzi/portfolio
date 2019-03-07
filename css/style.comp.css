@@ -347,7 +347,7 @@ body {
       justify-content: center; } }
   @media only screen and (max-width: 39.375em) {
     .side-nav {
-      font-size: 1.4rem; } }
+      font-size: 1.8rem; } }
   .side-nav__item {
     position: relative; }
     @media only screen and (max-width: 57.5em) {
