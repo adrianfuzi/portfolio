@@ -73,6 +73,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  @media only screen and (max-width: 57.5em) {
+    .sidebar {
+      min-height: 25rem; } }
 
 .page {
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(216, 216, 216, 0.9)), url(../img/background.jpg);
