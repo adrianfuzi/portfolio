@@ -29,6 +29,10 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @media only screen and (max-width: $bp-medium) {
+        min-height: 25rem;
+    }
+
 }
 
 .page {
