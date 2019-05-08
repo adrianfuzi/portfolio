@@ -64,7 +64,8 @@ body {
   display: flex; }
   @media only screen and (max-width: 57.5em) {
     .content-area {
-      flex-direction: column; } }
+      flex-direction: column;
+      height: 100vh; } }
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
@@ -72,12 +73,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  @media only screen and (max-width: 75em) {
-    .sidebar {
-      height: 100%; } }
-  @media only screen and (max-width: 57.5em) {
-    .sidebar {
-      min-height: 25rem; } }
 
 .page {
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(216, 216, 216, 0.9)), url(../img/background.jpg);
