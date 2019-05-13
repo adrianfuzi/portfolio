@@ -62,7 +62,7 @@ body {
 
 .content-area {
   display: flex; }
-  @media only screen and (max-width: 57.5em) {
+  @media only screen and (max-width: 68.75em) {
     .content-area {
       flex-direction: column;
       height: 100vh; } }
@@ -73,7 +73,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  @media only screen and (max-width: 57.5em) {
+  @media only screen and (max-width: 68.75em) {
     .sidebar {
       min-height: 25rem; } }
 
@@ -88,7 +88,7 @@ body {
   @media only screen and (max-width: 75em) {
     .page {
       background-size: contain; } }
-  @media only screen and (max-width: 57.5em) {
+  @media only screen and (max-width: 68.75em) {
     .page {
       clip-path: none;
       width: 100%; } }
@@ -97,6 +97,22 @@ body {
       min-height: fit-content;
       width: 100%;
       align-self: center; } }
+
+.footer {
+  width: 100%;
+  min-height: 10rem;
+  background-color: var(--color-grey-dark-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  @media only screen and (min-width: 68.75em) {
+    .footer {
+      display: none; } }
+  .footer__legal {
+    font-size: 1.2rem;
+    color: var(--color-grey-dark-4);
+    text-align: center;
+    padding: 2.5rem; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -195,7 +211,7 @@ body {
   @media only screen and (max-width: 75em) {
     .projects {
       flex-direction: column; } }
-  @media only screen and (max-width: 57.5em) {
+  @media only screen and (max-width: 68.75em) {
     .projects {
       flex-direction: row; } }
   @media only screen and (max-width: 46.25em) {
@@ -252,7 +268,7 @@ body {
         font-size: 2.2rem; } }
     @media only screen and (max-width: 68.75em) {
       .projects__heading {
-        font-size: 1.5rem; } }
+        font-size: 1.3rem; } }
     @media only screen and (max-width: 57.5em) {
       .projects__heading {
         font-size: 1.2rem; } }
@@ -266,7 +282,7 @@ body {
     padding: .5rem;
     font-size: 1.3rem;
     color: var(--color-grey-light-1); }
-    @media only screen and (max-width: 57.5em) {
+    @media only screen and (max-width: 68.75em) {
       .projects__description {
         font-size: .8rem; } }
     @media only screen and (max-width: 46.25em) {
@@ -332,14 +348,14 @@ body {
   .header__title {
     font-size: 1.5rem;
     color: var(--color-grey-light-3); }
-  @media only screen and (max-width: 57.5em) {
+  @media only screen and (max-width: 68.75em) {
     .header {
       margin: 0; } }
 
 .side-nav {
   font-size: 1.8rem;
   list-style: none; }
-  @media only screen and (max-width: 57.5em) {
+  @media only screen and (max-width: 68.75em) {
     .side-nav {
       display: flex;
       justify-content: center; } }
@@ -348,12 +364,12 @@ body {
       font-size: 1.8rem; } }
   .side-nav__item {
     position: relative; }
-    @media only screen and (max-width: 57.5em) {
+    @media only screen and (max-width: 68.75em) {
       .side-nav__item {
         margin: 0 .5rem 0 .5rem; } }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
-      @media only screen and (max-width: 57.5em) {
+      @media only screen and (max-width: 68.75em) {
         .side-nav__item:not(:last-child) {
           margin-bottom: 0; } }
   .side-nav__item::before {
@@ -380,7 +396,7 @@ body {
     z-index: 5;
     font-weight: 300;
     line-height: .5rem; }
-    @media only screen and (max-width: 57.5em) {
+    @media only screen and (max-width: 68.75em) {
       .side-nav__link:link, .side-nav__link:visited {
         padding: 1.5rem 4rem;
         margin: 0; } }
@@ -408,7 +424,7 @@ body {
   color: var(--color-grey-dark-4);
   text-align: center;
   padding: 2.5rem; }
-  @media only screen and (max-width: 57.5em) {
+  @media only screen and (max-width: 68.75em) {
     .legal {
       display: none; } }
 

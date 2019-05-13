@@ -13,10 +13,19 @@
 .content-area {
     display: flex;
 
-    @media only screen and (max-width: $bp-medium) {
+    // @media only screen and (min-width: $bp-largest) {
+    //     height: 100%;
+    // }
+
+    // @media only screen and (max-width: $bp-large) {
+    //     height: 100vh;
+    // }
+
+    @media only screen and (max-width: $bp-large) {
         flex-direction: column;
         height: 100vh;
     }
+
 
 }
 
@@ -29,7 +38,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: $bp-large) {
         min-height: 25rem;
     }
 
@@ -53,7 +62,7 @@
         background-size: contain;
     }
 
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: $bp-large) {
         clip-path: none;
         width: 100%;
     }
@@ -63,4 +72,26 @@
         width: 100%;
         align-self: center;
     }
+}
+
+.footer {
+    width: 100%;
+    min-height: 10rem;
+    background-color: var(--color-grey-dark-1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media only screen and (min-width: $bp-large) {
+        display: none;
+    }
+
+    &__legal {
+        font-size: 1.2rem;
+        color: var(--color-grey-dark-4);
+        text-align: center;
+        padding: 2.5rem;
+    }
+
 }
