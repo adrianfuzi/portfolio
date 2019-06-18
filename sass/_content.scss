@@ -180,7 +180,7 @@
         &:focus {
             outline: none;
             box-shadow: 0 1rem 2rem var(--color-grey-dark-3);
-            border-bottom: 3px solid var(--color-primary-light);
+            border-bottom: 3px solid var(--color-tertiary);
         }
 
         &:focus:invalid {

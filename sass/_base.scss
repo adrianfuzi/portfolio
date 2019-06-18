@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap');
+
 :root {
-    --color-primary: #007180;
-    --color-primary-light: #00A1B7;
+    --color-primary: #5B47F1;
+    --color-primary-light: #7848F6;
 
     --color-secondary: #B71600;
+
+    --color-tertiary:  rgb(0, 187, 109);
 
     --color-grey-light-1: #faf9f9;
     --color-grey-light-2: #f4f2f2;
     --color-grey-light-3: #ccc;
     
-    --color-grey-dark-1: #333;
+    --color-grey-dark-1: #383838;
     --color-grey-dark-2: #777;
     --color-grey-dark-3: #999;
 
@@ -59,7 +63,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     line-height: 1.6;
     color: var(--color-grey-dark-2);
@@ -69,5 +73,5 @@ body {
 }
 
 ::selection {
-    background: var(--color-primary-light);
+    background: var(--color-tertiary);
   }

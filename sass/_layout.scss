@@ -3,10 +3,12 @@
     margin: 8rem auto;
     background-color: var(--color-grey-light-2);
     box-shadow: var(--shadow-dark);
+    border-radius: 10px;
 
     @media only screen and (max-width: $bp-largest) {
         margin: 0;
         max-width: 100%;
+        border-radius: 0;
     }
 }
 
@@ -37,22 +39,31 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+    @media only screen and (max-width: $bp-largest) {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
 
     @media only screen and (max-width: $bp-large) {
         min-height: 25rem;
     }
-
 }
 
 .page {
+    // color: rgb(119, 69, 246); 247, 244, 255 212, 206, 255
     background-image: linear-gradient(
-        to right bottom, rgba(255, 255, 255, 0.9), 
-                         rgba(216, 216, 216, 0.9)),
-                            url(../img/background.jpg);
+        to right, rgba(247, 244, 255, 0.9), 
+                         rgba(229, 226, 252, 0.9)),
+                            url(../img/background.png);
     background-size: cover;
     min-height: 65rem;
 
     clip-path: polygon(0 15% , 100% 0, 100% 85%, 0 100%);
+
+    border-top-right-radius: 10px;
 
     flex: 1;
     justify-content: center;
