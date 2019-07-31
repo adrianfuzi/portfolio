@@ -1,108 +1,174 @@
 .container {
-    max-width: 120rem;
-    margin: 8rem auto;
-    background-color: var(--color-grey-light-2);
-    box-shadow: var(--shadow-dark);
-    border-radius: 10px;
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-dark);
+  border-radius: 3px;
 
-    @media only screen and (max-width: $bp-largest) {
-        margin: 0;
-        max-width: 100%;
-        border-radius: 0;
-    }
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    border-radius: 0;
+  }
 }
 
 .content-area {
-    display: flex;
+  display: flex;
 
-    // @media only screen and (min-width: $bp-largest) {
-    //     height: 100%;
-    // }
+  // @media only screen and (min-width: $bp-largest) {
+  //     height: 100%;
+  // }
 
-    // @media only screen and (max-width: $bp-large) {
-    //     height: 100vh;
-    // }
+  // @media only screen and (max-width: $bp-large) {
+  //     height: 100vh;
+  // }
 
-    @media only screen and (max-width: $bp-large) {
-        flex-direction: column;
-        height: 100vh;
-    }
-
-
+  @media only screen and (max-width: $bp-large) {
+    flex-direction: column;
+    height: 100vh;
+  }
 }
 
 .sidebar {
-    background-color: var(--color-grey-dark-1);
+  background-color: var(--color-grey-dark-1);
 
-    flex: 0 0 18%;
+  flex: 0 0 18%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    
-    @media only screen and (max-width: $bp-largest) {
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 
-    @media only screen and (max-width: $bp-large) {
-        min-height: 25rem;
-    }
+  @media only screen and (max-width: $bp-largest) {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    min-height: 25rem;
+  }
 }
 
 .page {
-    // color: rgb(119, 69, 246); 247, 244, 255 212, 206, 255
-    background-image: linear-gradient(
-        to right, rgba(247, 244, 255, 0.9), 
-                         rgba(229, 226, 252, 0.9)),
-                            url(../img/background.png);
-    background-size: cover;
-    min-height: 65rem;
+  background-image: linear-gradient(
+      to left,
+      rgba(247, 244, 255, 0.2),
+      rgba(229, 226, 252, 0.9)
+    ),
+    linear-gradient(
+      201deg,
+      rgba(148, 148, 148, 0.07) 0%,
+      rgba(148, 148, 148, 0.07) 50%,
+      rgba(83, 83, 83, 0.07) 50%,
+      rgba(83, 83, 83, 0.07) 100%
+    ),
+    linear-gradient(
+      192deg,
+      rgba(176, 176, 176, 0.08) 0%,
+      rgba(176, 176, 176, 0.08) 50%,
+      rgba(180, 180, 180, 0.08) 50%,
+      rgba(180, 180, 180, 0.08) 100%
+    ),
+    linear-gradient(
+      48deg,
+      rgba(185, 185, 185, 0.1) 0%,
+      rgba(185, 185, 185, 0.1) 50%,
+      rgba(243, 243, 243, 0.1) 50%,
+      rgba(243, 243, 243, 0.1) 100%
+    ),
+    linear-gradient(
+      65deg,
+      rgba(172, 172, 172, 0.09) 0%,
+      rgba(172, 172, 172, 0.09) 50%,
+      rgba(209, 209, 209, 0.09) 50%,
+      rgba(209, 209, 209, 0.09) 100%
+    ),
+    linear-gradient(
+      4deg,
+      rgba(224, 224, 224, 0.03) 0%,
+      rgba(224, 224, 224, 0.03) 50%,
+      rgba(49, 49, 49, 0.03) 50%,
+      rgba(49, 49, 49, 0.03) 100%
+    ),
+    linear-gradient(
+      228deg,
+      rgba(152, 152, 152, 0.03) 0%,
+      rgba(152, 152, 152, 0.03) 50%,
+      rgba(130, 130, 130, 0.03) 50%,
+      rgba(130, 130, 130, 0.03) 100%
+    ),
+    linear-gradient(
+      163deg,
+      rgba(170, 170, 170, 0.08) 0%,
+      rgba(170, 170, 170, 0.08) 50%,
+      rgba(232, 232, 232, 0.08) 50%,
+      rgba(232, 232, 232, 0.08) 100%
+    ),
+    linear-gradient(
+      152deg,
+      rgba(12, 12, 12, 0.05) 0%,
+      rgba(12, 12, 12, 0.05) 50%,
+      rgba(161, 161, 161, 0.05) 50%,
+      rgba(161, 161, 161, 0.05) 100%
+    ),
+    linear-gradient(
+      302deg,
+      rgba(48, 48, 48, 0.1) 0%,
+      rgba(48, 48, 48, 0.1) 50%,
+      rgba(195, 195, 195, 0.1) 50%,
+      rgba(195, 195, 195, 0.1) 100%
+    ),
+    linear-gradient(90deg, rgb(144, 14, 253), rgb(74, 115, 255));
+  // background-image: linear-gradient(
+  //     to right, rgba(247, 244, 255, 0.9),
+  //                      rgba(229, 226, 252, 0.9)),
+  //                         url(../img/background.png);
+  background-size: cover;
+  min-height: 65rem;
 
-    clip-path: polygon(0 15% , 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
 
-    border-top-right-radius: 10px;
+  border-top-right-radius: 3px;
 
-    flex: 1;
-    justify-content: center;
-    flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
 
-    @media only screen and (max-width: $bp-largest) {
-        background-size: contain;
-    }
+  @media only screen and (max-width: $bp-largest) {
+    background-size: contain;
+    border-top-right-radius: 0px;
+  }
 
-    @media only screen and (max-width: $bp-large) {
-        clip-path: none;
-        width: 100%;
-    }
+  @media only screen and (max-width: $bp-large) {
+    clip-path: none;
+    width: 100%;
+  }
 
-    @media only screen and (max-width: $bp-sm-medium) {
-        min-height: fit-content;
-        width: 100%;
-        align-self: center;
-    }
+  @media only screen and (max-width: $bp-sm-medium) {
+    min-height: fit-content;
+    width: 100%;
+    align-self: center;
+  }
 }
 
 .footer {
-    width: 100%;
-    min-height: 10rem;
-    background-color: var(--color-grey-dark-1);
+  width: 100%;
+  min-height: 10rem;
+  background-color: var(--color-grey-dark-1);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
-    @media only screen and (min-width: $bp-large) {
-        display: none;
-    }
+  @media only screen and (min-width: $bp-large) {
+    display: none;
+  }
 
-    &__legal {
-        font-size: 1.2rem;
-        color: var(--color-grey-dark-4);
-        text-align: center;
-        padding: 2.5rem;
-    }
-
+  &__legal {
+    font-size: 1.2rem;
+    color: var(--color-grey-dark-4);
+    text-align: center;
+    padding: 2.5rem;
+  }
 }
